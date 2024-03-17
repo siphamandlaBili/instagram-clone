@@ -7,7 +7,8 @@
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-       
+      <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
@@ -1098,5 +1099,35 @@
         </div>
       </main>
     </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    
+        <script>
+            <!-- Your web app's Firebase configuration -->
+            const firebaseConfig = {
+              apiKey: "AIzaSyCJM_fwQqz1BYAaqbPEw9l2wKyHc6uTIMY",
+              authDomain: "insta-clone-9dd55.firebaseapp.com",
+              projectId: "insta-clone-9dd55",
+              storageBucket: "insta-clone-9dd55.appspot.com",
+              messagingSenderId: "628989565207",
+              appId: "1:628989565207:web:f4d942bc9a22ba3aa8ff52"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+    
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+
+            console.log(auth,db);
+    
+        </script>
   </body>
 </html>
